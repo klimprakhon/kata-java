@@ -37,8 +37,6 @@ public class TennisScore {
     public String normalGame () {
         String player1Score = ScoreLadder.get(player1WinBall);
         String player2Score = ScoreLadder.get(player2WinBall);
-        System.out.println("player1WinTheBall: " + player1WinBall);
-        System.out.println("player1Score: " + player1Score);
 
         return player1Score + "-" + player2Score;
     }
