@@ -12,8 +12,9 @@ public class TennisScore {
     private int player2WinBall = 0;
 
     public String getScore() {
-        boolean isNormalGame = player1WinBall <= 3 && player2WinBall <= 3;
-        boolean isDeuce = player1WinBall >= 3 && player2WinBall >=3 && player1WinBall == player2WinBall;
+        int MAX_SCORE = 3;
+        boolean isNormalGame = player1WinBall <= MAX_SCORE && player2WinBall <= MAX_SCORE;
+        boolean isDeuce = player1WinBall >= MAX_SCORE && player2WinBall >= MAX_SCORE && player1WinBall == player2WinBall;
 
         if (isDeuce) {
             return deuceGame();
@@ -56,7 +57,7 @@ public class TennisScore {
         boolean isMatchPoint = Math.abs(player1WinBall - player2WinBall) == 1;
 
         if (isMatchPoint) {
-                return winPlayer + " - Advantage";
+            return winPlayer + " - Advantage";
         }
 
         return winPlayer + " - Win";
